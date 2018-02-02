@@ -1,12 +1,30 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
 
+        app:layout_behavior="com.example.xyzreader.ui.XYZFabBehavior"
+
+
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        app:backgroundTint="@color/secondaryColor"
+        android:stateListAnimator="@anim/fab_state_list_anim"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_share"
+        app:elevation="@dimen/fab_elevation"
+        app:pressedTranslationZ="6dp"
+        android:contentDescription="@string/action_share" />
     <android.support.v7.widget.Toolbar
         android:id="@+id/up_container"
         android:elevation="0dp"
@@ -25,4 +43,4 @@
             android:contentDescription="@string/up"
             android:src="@drawable/ic_arrow_back" />
     </android.support.v7.widget.Toolbar>
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
